@@ -20,5 +20,8 @@ public class ifelse{
             System.out.println("B is Greater.");
         else
             System.out.println("C is Greater.");
+
+        // Using ternary operator
+        System.out.println("Using ternary Operator: "+ (a>b&&a>c?a: b>a&&b>c?b : c));
     }
 }
