@@ -6,7 +6,6 @@ class Calculator{            // creating class
     }
 }
 
-
 public class classAndObjects{
     public static void main(String[] args){
         int num1 = 4;
