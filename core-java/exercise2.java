@@ -1,6 +1,5 @@
 public class exercise2 {
     public static void main(String[] args) {
-
         double num1 = 7;
         double num2 = 3;
         char operator = '+';
