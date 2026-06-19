@@ -2,16 +2,16 @@ class Human{
     private int age;
     private String name;
 
-    public void setAge(int a){
-        age = a;
+    public void setAge(int age){ // setter 
+        this.age = age;
     }
-    public int getAge(){
+    public int getAge(){ // getter
         return age;
     }
-    public void setName(String n){
-        name = n;
+    public void setName(String name){ // setter 
+        this.name = name;
     }
-    public String getName(){
+    public String getName(){ // getter
         return name;
     }
 }
