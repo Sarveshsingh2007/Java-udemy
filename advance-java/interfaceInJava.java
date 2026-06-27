@@ -1,25 +1,58 @@
-interface A{
-    int age = 20; // final and static 
-    String Area = "Uttarakhand"; // final and static
+// class - class -> extends
+// class - interface -> implements
+// interface - interface -> extends
 
-    void show(); // abstract
-    void config();  // abstract
+interface A
+{
+//	public abstract void show();
+//	public abstract void config();
+	int age=44;            // final and static 
+	String area="Mumbai";
+	
+	void show();
+	void config();
 }
-class B implements A{
-    public void show(){
-        System.out.println("in show.");
-    }
-    public void config(){
-        System.out.println("in config.");
-    }
+
+interface X
+{
+	void run();
 }
-public class interfaceInJava{
-    public static void main(String[] args){
-        A obj;
-        obj = new B();
-        obj.show();
-        obj.config();
-        // A.area = "Mumbai";        We can't modify final and static value.
-        System.out.println(A.Area);
+interface Y extends X
+{
+	
+}
+
+class B implements A,Y
+{
+	public void show()
+	{
+		System.out.println("in show");
+	}
+	public void config()
+	{
+		System.out.println("in cofing");
+	}
+	public void run()
+	{
+		System.out.println("running...");
+	}
+}
+
+public class interfaceInJava {
+    public static void main(String[] args) {
+
+    	A obj;
+    	obj=new B();
+    	
+    	obj.show();
+    	obj.config();
+    	
+    	X obj1=new B();
+    	obj1.run();
+    	
+ //   	A.area="Hyderabad";
+    	
+    	System.out.println(A.area);
+        
     }
 }
