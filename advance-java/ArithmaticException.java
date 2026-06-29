@@ -1,0 +1,6 @@
+/**
+ * ArithmaticException
+ */
+public class ArithmaticException {
+
+}
