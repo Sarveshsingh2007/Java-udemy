@@ -261,8 +261,7 @@ Java-SpringBoot-Mastery/
 ## 📈 Current Progress
 
 * [x] Course Introduction
-* [ ] Core Java
-* [ ] Advance Java
+* [x] Advance Java
 * [ ] Maven
 * [ ] JDBC
 * [ ] Hibernate
