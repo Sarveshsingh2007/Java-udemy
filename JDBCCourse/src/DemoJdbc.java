@@ -9,7 +9,7 @@ public class DemoJdbc {
 
         String url = "jdbc:postgresql://localhost:5432/Demo";
         String uname = "postgres";
-        String pass = "sarvesh123";
+        String pass = "######";
 
         Connection con = DriverManager.getConnection(url, uname, pass);
 
