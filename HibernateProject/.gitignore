@@ -38,8 +38,8 @@ build/
 ### Mac OS ###
 .DS_Store
 
-# Hibernate config
-src/main/resources/
+# Hibernate configuration (contains local DB credentials)
+src/main/resources/hibernate.cfg.xml
 
 # IntelliJ
 .idea/
