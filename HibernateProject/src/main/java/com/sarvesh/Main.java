@@ -109,22 +109,58 @@ public class Main {
 
 
  ////////////            FETCHING DATA USING HQL          /////////////
+//
+//
+//        SessionFactory sf = new Configuration()
+//                .addAnnotatedClass(Laptop.class)
+//                .configure()
+//                .buildSessionFactory();
+//
+//        Session session = sf.openSession();
+//
+////        Query query = session.createQuery("from Laptop");
+////        List<Laptop> laptops = query.list();
+//
+////        Query query = session.createQuery("from Laptop where brand like 'MSI'");
+//
+////        String brand = "MSI";
+////        Query query = session.createQuery("from Laptop where brand like ?1");
+////        query.setParameter(1, brand);
+////        List<Laptop> laptops = query.getResultList();
+//
+//        String brand = "Dell";
+//        Query query = session.createQuery("select model, brand from Laptop where brand like ?1");
+//        query.setParameter(1, brand);
+//        List<Object[]> laptops = query.getResultList();
+//
+//        for(Object[] data : laptops){
+//            System.out.println((String)data[0] + " " + (String)data[1]);
+//        }
+//
+//        System.out.println(laptops);
+//
+//        session.close();
+//        sf.close();
+
+            SessionFactory sf = new Configuration()
+                    .addAnnotatedClass(Laptop.class)
+                    .configure()
+                    .buildSessionFactory();
+
+            Session session = sf.openSession();
+            Laptop laptop = session.find(Laptop.class, 1);
+            System.out.println(laptop);
+
+            session.close();
+
+            Session session1 = sf.openSession();
+            Laptop laptop1 = session1.find(Laptop.class, 1);
+            System.out.println(laptop1);
+
+            session1.close();
+            sf.close();
 
 
-        SessionFactory sf = new Configuration()
-                .addAnnotatedClass(Laptop.class)
-                .configure()
-                .buildSessionFactory();
-
-        Session session = sf.openSession();
-
-        Query query = session.createQuery("from Laptop");
-        List<Laptop> laptops = query.list();
-
-        System.out.println(laptops);
-
-        session.close();
-        sf.close();
 
     }
 }
