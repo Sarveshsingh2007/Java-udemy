@@ -1,0 +1,47 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--        <bean id="alien" class="com.sarvesh.Alien" scope="prototype">  </bean>-->
+
+<!--    <bean id="alien" class="com.sarvesh.Alien" autowire="byName">-->
+
+    <bean id="alien" class="com.sarvesh.Alien" autowire="byType">
+
+        <property name="age" value="21"/>
+        <property name="com" ref="com1"/>
+
+<!--        <property name="age" value="20"/>-->
+
+<!--        <constructor-arg ref="lap"/>-->
+
+
+<!--        DOUBLE PARAMETERIZED USING TYPE-->
+<!--        <constructor-arg type="com.sarvesh.Laptop" ref="lap"/>-->
+<!--        <constructor-arg type="int" value="20"/>-->
+
+<!--        DOUBLE PARAMETERIZED USING INDEX-->
+<!--        <constructor-arg index="0" value="20"/>-->
+<!--        <constructor-arg index="1" ref="lap"/>-->
+
+
+<!--        DOUBLE PARAMETERIZED USING NAME-->
+<!--        <constructor-arg name="age" value="21"/>-->
+<!--        <constructor-arg name="laptop" ref="lap"/>-->
+        
+
+
+    </bean>
+
+    <bean id="com1" class="com.sarvesh.Laptop" primary="true">
+
+    </bean>
+
+    <bean id="com2" class="com.sarvesh.Desktop" lazy-init="true">
+
+    </bean>
+
+
+</beans>
+
