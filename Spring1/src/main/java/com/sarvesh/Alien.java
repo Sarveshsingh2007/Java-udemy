@@ -1,10 +1,17 @@
 package com.sarvesh;
 
-import java.beans.ConstructorProperties;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+import java.beans.ConstructorProperties;
+@Component
 public class Alien {
 
+//    @Autowired
     private Computer com;
+    @Value("21")
     private int age;
 
     public Alien(){
@@ -35,6 +42,8 @@ public class Alien {
         return com;
     }
 
+    @Autowired
+    @Qualifier("laptop")
     public void setCom(Computer com) {
         this.com = com;
     }
