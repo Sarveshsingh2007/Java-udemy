@@ -262,11 +262,11 @@ Java-SpringBoot-Mastery/
 
 * [x] Course Introduction
 * [x] Advance Java
-* [ ] Maven
-* [ ] JDBC
-* [ ] Hibernate
-* [ ] Spring Framework
-* [ ] Spring Boot
+* [x] Maven
+* [x] JDBC
+* [x] Hibernate
+* [x] Spring Framework
+* [x] Spring Boot
 * [ ] Spring Security
 * [ ] Docker
 * [ ] Spring AI
