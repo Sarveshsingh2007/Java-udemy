@@ -1,16 +1,24 @@
-<%@ page language="java" %>
-<html>
+<html xmlns:th="https://www.thymeleaf.org">
+
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-        <h2>Add Two Numbers</h2>
-        <form action="addAlien">
-            <label for="aId">Enter Id :</label>
-            <input type="text" name="aId">
-            <label for="aName">Enter Name :</label>
-            <input type="text" name="aName">
-            <input type="submit" value="Submit">
-        </form>
+
+<h2>Add User Data</h2>
+
+<form action="addAlien" method="get">
+
+    <label for="aId">Enter Id:</label>
+    <input type="text" id="aId" name="aId">
+
+    <label for="aName">Enter Name:</label>
+    <input type="text" id="aName" name="aName">
+
+    <input type="submit" value="Submit">
+
+</form>
+
 </body>
 </html>
