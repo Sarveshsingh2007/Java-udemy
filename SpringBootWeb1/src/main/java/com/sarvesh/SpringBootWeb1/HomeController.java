@@ -4,12 +4,19 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
+
+    @ModelAttribute("course")
+    public String courseName(){
+        return "JAVA";
+    }
+
     @RequestMapping("/")
     public String home(){
         System.out.println("Home method called");
@@ -52,6 +59,23 @@ public class HomeController {
         mv.addObject("result", result);
         mv.setViewName("result");
         return mv;
+    }
+
+    // =============== ModelAndView for adding alien ============== //
+//    @RequestMapping("addAlien")
+//    public ModelAndView addAlien(int aId, String aName, ModelAndView mv){
+//        Alien alien = new Alien();
+//        alien.setaId(aId);
+//        alien.setaName(aName);
+//        mv.addObject("alien", alien);
+//        mv.setViewName("result");
+//        return mv;
+//    }
+
+    // =============== Making code simpler ============== //
+    @RequestMapping("addAlien")
+    public String addAlien(Alien alien, ModelAndView mv){
+        return "result";
     }
 
 
