@@ -14,7 +14,7 @@ public class JobRestController {
     @Autowired
     private JobService service;
 
-    @GetMapping("jobPosts")
+    @GetMapping(path="jobPosts", produces = "application/json")
     public List<JobPost> getAllJobs(){
         return service.getAllJobs();
     }
