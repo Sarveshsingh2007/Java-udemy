@@ -5,6 +5,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import java.sql.SQLOutput;
+import java.util.Optional;
+
 @SpringBootApplication
 public class SpringDataJspExApplication {
 
@@ -28,9 +31,21 @@ public class SpringDataJspExApplication {
 		s3.setName("Anshu");
 		s3.setMarks(80);
 
-		repo.save(s1);
-		repo.save(s2);
-		repo.save(s3);
+//		repo.save(s1);
+//		repo.save(s2);
+//		repo.save(s3);
+
+		System.out.println("Printing all the rows: " + repo.findAll());
+//		System.out.println("Printing row find by id: " + repo.findById(101));
+		Optional<Student> s = repo.findById(101);
+		System.out.println("Student row find using Optional: " + s.orElse(new Student()));
+
+		System.out.println("Printing row find by name: " + repo.findByName("Sarvesh"));
+
+		System.out.println("Printing row find by Marks: " + repo.findByMarks(90));
+
+		repo.delete(s3);
+
 	}
 
 }
