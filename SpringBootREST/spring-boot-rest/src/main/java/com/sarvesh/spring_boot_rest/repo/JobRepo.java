@@ -13,7 +13,7 @@ import java.util.Optional;
 public interface JobRepo extends JpaRepository<JobPost,Integer>{
     Optional<JobPost> findByPostProfile(String postProfile);
 
-    List<JobPost> findByPostProfileContainingOrPostDescContaining(String keyword, String keyword1);
+    List<JobPost> findByPostProfileContainingOrPostDescContaining(String keyword, String keyword1 );
 }
 
 
