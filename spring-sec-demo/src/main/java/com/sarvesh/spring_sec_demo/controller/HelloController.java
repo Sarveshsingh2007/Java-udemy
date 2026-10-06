@@ -6,13 +6,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
+//    @GetMapping("/hello")
+//    public String greet(HttpServletRequest request){
+////        return "Hello World" + request.getSession().getId();
+//        return "Hello world!";
+//    }
+
     @GetMapping("/hello")
-    public String greet(HttpServletRequest request){
-        return "Hello World" + request.getSession().getId();
+    public String greet(){
+        return "Hello world!";
     }
 
     @GetMapping("/about")
-    public String about(HttpServletRequest request){
-        return "This is about page." + request.getSession().getId();
+    public String about(){
+        return "This is about page.";
     }
 }

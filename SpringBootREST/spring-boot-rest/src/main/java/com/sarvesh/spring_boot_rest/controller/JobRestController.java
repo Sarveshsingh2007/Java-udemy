@@ -1,4 +1,4 @@
-package com.sarvesh.spring_boot_rest;
+package com.sarvesh.spring_boot_rest.controller;
 
 import com.sarvesh.spring_boot_rest.model.JobPost;
 import com.sarvesh.spring_boot_rest.service.JobService;
